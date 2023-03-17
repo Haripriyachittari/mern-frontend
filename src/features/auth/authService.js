@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_URL='/api/users/'
+const API_URL='https://goalsetter-backend.onrender.com/api/users/'
 
 const register=async(user)=>{
     const response=await axios.post(API_URL,user)
