@@ -8,8 +8,8 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const onLogout = () => {
-    dispatch(reset());
-    dispatch(logout());
+     dispatch(logout());
+     dispatch(reset());
     navigate("/");
   };
   return (
