@@ -54,15 +54,8 @@ export const login=createAsyncThunk('auth/login' ,async(user,thunkAPI)=>{
        return thunkAPI.rejectWithValue(message)
     }
 })
-export const logout=createAsyncThunk('auth/logout' ,async(user,thunkAPI)=>{
-    try{
-      await authService.logout(user)
-    }
-    catch(err)
-    {
-       const message= (err.response && err.response.data && err.response.data.message)|| err.message || err.toString()
-       return thunkAPI.rejectWithValue(message)
-    }
+export const logout=createAsyncThunk('auth/logout' ,async()=>{
+   await authService.logout()
 })
 
 const authSlice=createSlice({
