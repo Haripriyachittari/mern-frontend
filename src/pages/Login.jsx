@@ -54,7 +54,7 @@ const Login = () => {
       toast.success(" Logged in Successfully ");
     }
     dispatch(reset());
-  }, [isLoading, isSuccess, user, isError, dispatch, message, navigate]);
+  }, [isSuccess, user, isError, dispatch, message, navigate]);
 
   if (isLoading) {
     return <Spinner />;
